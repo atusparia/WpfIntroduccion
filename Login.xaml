@@ -6,20 +6,43 @@
         xmlns:local="clr-namespace:WpfIntroduccion"
         mc:Ignorable="d"
         Title="Login" Height="220" Width="400">
+    <Window.Resources>
+        <Style x:Key="lblEstilo" TargetType="Label">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="Margin" Value="0,0,50,0"/>
+        </Style>
+        <Style x:Key="txtEstilo" TargetType="TextBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="Azure"/>
+        </Style>
+        <Style x:Key="btnEstilo" TargetType="Button">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <StackPanel>
             <StackPanel Orientation="Vertical">
-                <Label Content="Usuario" Width="200" FontWeight="Bold" Margin="0,0,50,0"></Label>
-                <TextBox Width="200" Height="30" Background="Azure" x:Name="txtUsuario" ></TextBox>
+                <Label Content="Usuario" Style="{StaticResource lblEstilo}"></Label>
+                <TextBox Style="{StaticResource txtEstilo}" x:Name="txtUsuario" ></TextBox>
             </StackPanel>
             <StackPanel Orientation="Vertical">
-                <Label Content="Contraseña" Width="200" FontWeight="Bold" Margin="0,0,50,0"></Label>
-                <TextBox Width="200" Height="30" Background="Azure" x:Name="txtContraseña"></TextBox>
+                <Label Content="Contraseña" Style="{StaticResource lblEstilo}"></Label>
+                <TextBox Style="{StaticResource txtEstilo}" x:Name="txtContraseña"></TextBox>
             </StackPanel>
 
             <StackPanel>
-                <Button x:Name="btnAceptar" Content="Aceptar" Width="100" Height="30" Margin="10"></Button>
+                <Button x:Name="btnAceptar" Content="Aceptar" Style="{StaticResource btnEstilo}"></Button>
+                <Button x:Name="btnSalir" Content="Salir" Style="{StaticResource btnSalir}"></Button>
             </StackPanel>
+
+            
         </StackPanel>
         
     </Grid>
