@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfIntroduccion.Operaciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfIntroduccion"
+        mc:Ignorable="d"
+        Title="Operaciones" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Valor1" Width="200" FontWeight="Bold"></Label>
+                <TextBox Width="200" Background="Azure" x:Name="txtValor1"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Valor2" Width="200" FontWeight="Bold"></Label>
+                <TextBox Width="200" Background="Azure" x:Name="txtValor2"></TextBox>
+            </StackPanel>
+
+            <Button x:Name="btnSumar" Click="btnSumar_Click" Content="Sumar"></Button>
+            <Button x:Name="btnRestar" Click="btnRestar_Click" Content="Restar"></Button>
+            <Button x:Name="btnMultiplicar" Click="btnMultiplicar_Click" Content="Multiplicar"></Button>
+
+            <Label x:Name="lblSuma" Content="Valor 2" Width="200" FontWeight="Bold"></Label>
+        </StackPanel>
+    </Grid>
+</Window>
